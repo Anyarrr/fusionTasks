@@ -74,11 +74,13 @@
 
 // })
 
-let user = {
-  name:'dima',
-  age:28,
-}
-for(let key in user){
-  console.log(key);
-  console.log(user[key]);
-}
+// let user = {
+//   name:'dima',
+//   age:28,
+// }
+// for(let key in user){
+//   console.log(key);
+//   console.log(user[key]);
+// }
+
+let array = new Array(5).fill(0)

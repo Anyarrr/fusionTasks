@@ -25,7 +25,7 @@
 function pow(keys){
   if(Array.isArray(keys)){
     return keys.map(item => pow(item));
-  }else if(typeof keys === 'object'){
+  }else if(typeof keys === 'object' && keys !== null){
     let tasks = {};
 for(let key in keys){
   tasks[key] = pow(keys[key]);
@@ -40,36 +40,9 @@ const obj = { a: 1, b: [2, { c: 3 }] };
 console.log((pow(obj)));
 
 
-
-
-
-// const recursiveFunc = (data) => {
-
-//   if (Array.isArray(data)) {
-//   return data.map(item => recursiveFunc(item));
-  
-//   } else if (typeof data === 'object') {
-//   const newObj = {};
-//   for (const key in data) {
-//   newObj[key] = recursiveFunc(data[key]);
-//   }
-//   return newObj;
-//   } else {
-//   return data;
-//   }
-//   }
-  
-//   const object = {a: 1, b: [2, 3, { d: 4 }], c: { e: 5, f: [6, 7] }, d: null};
-  
-//   // const temp = recursiveFunc(object)
-//   // temp.a = [1, 2]
-//   // console.log(temp)
-//   console.log(object)
-//   console.log((recursiveFunc(object)));
-
 ///////////////////ЗАДАЧА 3
 const w = 3;//ширина
-const h = 3;//высота
+const h = 3;//высота  
 
 function matrix(w, h){
     let result = new Array(h).fill().map(() => new Array(w).fill(""));
