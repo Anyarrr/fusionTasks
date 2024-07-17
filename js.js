@@ -1,24 +1,24 @@
 ///////ЗАДАЧА 2
 
-// let fruits = ['апельсин', 'аскорбин', 'мандарин', 'дыня'];
+let fruits = ['апельсин', 'аскорбин', 'мандарин', 'дыня'];
 
-// function summer(one, two) {
-//   return (one.at(0) == two.at(0) && one.at(-1) == two.at(-1));
-// }
+function summer(one, two) {
+  return (one.at(0) == two.at(0) && one.at(-1) == two.at(-1));
+}
 
-// function solution(arr) {
-//   let twoFruits = [];
-//   for (let i = 0; i < arr.length-1; i++) {
-//     if (summer(arr[i], arr[i + 1])) {
-//       twoFruits.push('true');
-//     } else {
-//       twoFruits.push('false');
-//     }
-//   }
-//   return twoFruits;
-// }
+function solution(arr) {
+  let twoFruits = [];
+  for (let i = 0; i < arr.length-1; i++) {
+    if (summer(arr[i], arr[i + 1])) {
+      twoFruits.push('true');
+    } else {
+      twoFruits.push('false');
+    }
+  }
+  return twoFruits;
+}
 
-// console.log(solution(fruits));
+console.log(solution(fruits));
 
 //////ЗАДАЧА 1
 
@@ -41,14 +41,16 @@ console.log((pow(obj)));
 
 
 ///////////////////ЗАДАЧА 3
-const w = 3;//ширина
-const h = 3;//высота  
+// const w = 3;//ширина
+// const h = 3;//высота  
 
-function matrix(w, h){
-    let result = new Array(h).fill().map(() => new Array(w).fill(""));
+const h = 3;
+
+function matrix(h){
+    let result = new Array(h).fill().map(() => new Array(h).fill(""));
     let couter = 1;//счетчик
     let startCol = 0;//начинаем с 0 заполнять оbj
-    let endCol = w - 1;//конец первого массива ,-1 для того чтобы получилась ширина в 3 элетента с 0 индексом а не 4 элемента
+    let endCol = h - 1;//конец первого массива ,-1 для того чтобы получилась ширина в 3 элетента с 0 индексом а не 4 элемента
     let startRow = 0;//
     let endRow = h - 1;//для того чтобы не изменить первый элемент не пошел на 1
 
@@ -80,5 +82,4 @@ function matrix(w, h){
 
     return result;
 }
-console.log(matrix(w, h));
-
+console.log(matrix(h));
